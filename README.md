@@ -18,7 +18,7 @@
 
 下图是官方给出的解决思路
 
-<img src="https://raw.githubusercontent.com/liuxinyumocn/WXWASMFIX/master/img/WX20210812-154119%402x.png" alt="image-20210410210434454" />
+<img src="https://github.com/liuxinyumocn/WXWASMFIX/blob/master/img/WX20210812-154119@2x.png?raw=true" alt="image-20210410210434454" />
 
 
 
@@ -46,7 +46,7 @@
 
 1. 使用微信开发者工具打开 prev 代码包，模拟器与Android真机运行正常，iOS8.0.9客户端运行时控制台报如下错误：
 
-   <img src="/Users/nebulaliu/Library/Application Support/typora-user-images/image-20210812170326564.png" alt="image-20210812170326564" width="200" />
+   <img src="https://github.com/liuxinyumocn/WXWASMFIX/blob/master/img/WX20210812-170403@2x.png?raw=true" alt="image-20210812170326564" width="200" />
 
    报错内容为：未定义的对象
 
@@ -70,13 +70,13 @@
 
    打印结果如下：
 
-   <img src="/Users/nebulaliu/Library/Application Support/typora-user-images/image-20210812171431605.png" alt="image-20210812171431605" width="300" />
+   <img src="https://github.com/liuxinyumocn/WXWASMFIX/blob/master/img/WX20210812-171421@2x.png?raw=true" alt="image-20210812171431605" width="300" />
 
    其中 $、$a...就是导出函数名，后面的 f 27() 、f 49() 是导出的函数指向的实际指针，报错的原因就是同一个实际指针被导出多个函数名（意味着右边存在超过3个以上相同的实际指针），多出的导出名在iOS中被忽略掉，因此导致了报错。
 
 3. 分别在模拟器与iOS真机中运行该脚本，获得粘贴板内的文本内容。可以看到模拟器中有855个导出函数，而iOS真机只有600个导出函数。接下来我们需要借助脚本进行批量扫描，得到需要替换的序列。使用浏览器打开本仓库 /tool/index.html 替换工具，将模拟器给出的粘贴板内容复制到第一个文本框内，将真机给出的粘贴板内容复制到第二个文本框内，点击识别。如下图所示。
 
-   <img src="/Users/nebulaliu/Library/Application Support/typora-user-images/image-20210813103450059.png" alt="image-20210813103450059" width="400" />
+   <img src="https://github.com/liuxinyumocn/WXWASMFIX/blob/master/img/WX20210813-103240@2x.png?raw=true" alt="image-20210813103450059" width="400" />
 
 4. 将胶水层代码全部复制粘贴至替换工具中的第三个文本框内，本文中也就是 wx.ammo.wasm.js 文件的源代码。
 
