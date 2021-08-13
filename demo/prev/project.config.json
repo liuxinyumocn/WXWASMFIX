@@ -18,6 +18,7 @@
         "checkSiteMap": true,
         "uploadWithSourceMap": true,
         "compileHotReLoad": false,
+        "lazyloadPlaceholderEnable": false,
         "useMultiFrameRuntime": false,
         "useApiHook": false,
         "useApiHostProcess": false,
@@ -27,19 +28,17 @@
             "outputPath": ""
         },
         "enableEngineNative": false,
-        "bundle": false,
         "useIsolateContext": true,
-        "useCompilerModule": true,
-        "userConfirmedUseCompilerModuleSwitch": false,
         "userConfirmedBundleSwitch": false,
         "packNpmManually": false,
         "packNpmRelationList": [],
-        "minifyWXSS": true
+        "minifyWXSS": true,
+        "showES6CompileOption": false
     },
     "compileType": "game",
     "libVersion": "2.17.0",
-    "appid": "wxc9ae2636ed6566a8",
-    "projectname": "Threejs_WX_WASM",
+    "appid": "wxa5883ac571743cb8",
+    "projectname": "修复前",
     "condition": {
         "search": {
             "list": []
